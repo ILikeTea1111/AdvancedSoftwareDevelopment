@@ -1,0 +1,72 @@
+1. Write the corresponding project description
+I am working for a software company, with the goal of designing a Location Based Shopping Application (LBSP).
+The desired application can run on any resource-bounded device, which includes smart devices such as smartphones.
+The application should be able to find nearby stores using the Google Maps API, and based on the user location.
+As the user moves around, new shops may be dynamically added to nearby shops.
+Each shop should display a list of items currently available.
+The user can select items that are available in stores and add them to their shopping list.
+They should be able to see what items from the list need to be purchased from the shop.
+The application should prompt the user whether to share a deals list via SMS or emails to others.
+A customer's authentication should be achieved by a login page, authentication cookies, or single sign-on.
+Payment should be done using credit card and external credit payment service or with PayPal.
+
+2. Define system boundary
+IN:
+List of nearby stores
+List of available items
+List of deals
+Customer authentication
+Shopping list
+
+OUT:
+Google Maps API
+Customer position/GPS system
+Location of shops
+Payment services
+
+3. Identify the actors (at least 3)
+Customers
+Shop owners
+Administrators
+
+4. Identify the use cases for each actor
+Customer:
+- Finding nearby stores and their items
+- Finding the best deals
+- Creating a shopping list to fulfill later
+- Purchase items using payment services
+
+Shop owners:
+- Allowing their shop to be discovered
+- Advertise their items to potential customers
+- Offers deals on items
+
+Administrators:
+- Manage user data to a sensible degree
+- Maintain the state of the application
+- Include or exclude shops on the map
+
+5. Draw the use-case diagram
+(Included in files)
+
+6. In your diagram you should show at least one <<extend>> and one
+<<include>> relationship.
+(Also included in files)
+
+7. Your graphical use case representation in (4) only presents an overview
+of your requirements. You also need to combine it with the textual
+representation of use cases that describe input-output scenarios with
+all their possible variants and exceptions. Provide a highest-level use-
+case specification considering pre and post conditions and an alternative
+path, considering one use case
+Precondition: The customer is using the application on a smart device
+Flow of events (Main path):
+1. The customer opens the application and starts the UseCase
+2. The map shows the nearby shops
+3. The customer can check what items they display
+4. The customer can decide to either add them to their shopping list or not
+5. The app can then display if there are any deals for the items
+6. The customer can choose to share the deals list by SMS or email to others
+7. The customer can pay for their items using a payment service like PayPal once the list is fulfilled
+8. The shopping list updates and the UseCase ends
+Postcondition: The shopping list updates to have
